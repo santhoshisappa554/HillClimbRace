@@ -21,9 +21,9 @@ public class PlayerMovement : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        backTire.AddForce(new Vector2(movement,0)*speed*Time.fixedDeltaTime);
-        FrontTire.AddTorque(movement * speed*Time.deltaTime);
-        car.AddTorque(movement * speed * Time.deltaTime);
+        backTire.AddTorque(-movement*speed*Time.fixedDeltaTime);
+        FrontTire.AddTorque(-movement * speed* Time.fixedDeltaTime);
+        car.AddTorque(-movement * speed * Time.fixedDeltaTime);
         
     }
 }
