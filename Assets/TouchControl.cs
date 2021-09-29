@@ -40,13 +40,5 @@ public class TouchControl : MonoBehaviour
             }
         } 
     }
-    public void StopButton()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            speed = 0;
-            Car.AddForce(Vector2.zero);
-        }
-    }
+    
 }
